@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ArrayToSort: 0c000000eb00000085020000460d36000b000000
-  element_poiska: 11
+  element_poiska: 1112
 --- !u!4 &306046260
 Transform:
   m_ObjectHideFlags: 0

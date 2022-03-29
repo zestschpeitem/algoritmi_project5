@@ -6,9 +6,9 @@ using System.Runtime.Serialization;
 public class algoritmi : MonoBehaviour
 {
     [SerializeField] private int[] ArrayToSort;
-    [SerializeField] private int element_poiska;
+    private int element_poiska=1;
     private int maximym;
-    private int index_elementa =-1;
+    private bool element;
 
 
 
@@ -99,31 +99,19 @@ public class algoritmi : MonoBehaviour
     [ContextMenu("FindElement")]
     public void FindElement()
     {
-        index_elementa = poisk(ArrayToSort);
+        element = poisk(ArrayToSort,12);
     }
-    public int poisk(int[] array)
+    public bool poisk(int[] array, int element_poiska)
     {
+        bool flag = false;
         for (int i = 0; i < array.Length; i++)
         {
-            if (element_poiska == array[i])
+            if (array[i] == element_poiska)
             {
-                index_elementa = i;
-                Debug.Log("YES, index elementa = " + i);
-                break;
-            }
-            else
-            {
-                i++;
+                flag=true;
             }
         }
-        if(index_elementa == -1)
-        {
-            Debug.Log("NO, element dont find");
-        }
-        else
-        {
-
-        }
-        return index_elementa;
+        Debug.Log(flag);
+        return flag;
     }
 }
